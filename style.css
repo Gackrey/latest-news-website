@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    height: 100vh;
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+}
+#container{
+    padding: 7px;
+    width: 70%;
+    align-items: center;
+    margin: 30px auto;
+}
+#container .content{
+    margin: 10px;
+}
+#container .content .heading{
+    display: flex;
+    background-color: rgb(5, 150, 150);
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+}
+#container .content .heading img{
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+}
+#container .content .heading::before{
+    content: "+";
+    position: relative;
+    right: -96%;
+    font-size: 1.5rem;
+}
+#container .content .fold{
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+#container .content.active .fold{
+    height: 70px;
+    padding: 10px;
+}
+#container .content.active .heading::before{
+    content: "-";
+}
